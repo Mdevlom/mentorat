@@ -6,7 +6,8 @@ COPY package*.json ./
 RUN npm ci
 
 COPY . .
-RUN npm run test
+# Supprimez cette ligne si les tests sont exécutés dans le pipeline CI
+# RUN npm run test
 
 FROM node:20-alpine
 
